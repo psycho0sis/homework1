@@ -1,11 +1,7 @@
 String.prototype.removeSpecialCharacters = function () {
-    let array = this.split("");
-    let newArr = array.filter(isLetter);
-    return newArr.join("")
-}
-
-function isLetter(letter) {
-    if (letter !== "!" && letter !== "?") return letter;
+    const regex = /[^a-zA-Z0-9]/g;
+    var newstr = this.replace(regex, "")
+    return newstr
 }
 
 console.log("HE!!LL??OO".removeSpecialCharacters())
