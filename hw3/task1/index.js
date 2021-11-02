@@ -18,7 +18,7 @@ async function changeCurrency() {
     console.log(el.Prices)  
   });
     
-console.log("clone object with euro field")
+  console.log("clone object with euro field")
   cloneDataContent.data.forEach(el => {
       el.Prices.PriceEuro = Math.round(el.Prices.Price / exchangeRate);
       el.Prices.RentailPriceEuro = Math.round(el.Prices["Retail Price"] / exchangeRate);
